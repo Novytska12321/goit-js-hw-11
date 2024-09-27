@@ -4,7 +4,7 @@ export const fetchPhotos = (searchValue) => {
         q: searchValue,
         image_type: 'photos',
         orientation: 'horizontal',
-        safesearch: true,
+        safesearch: "true",
         key: '46112845-f959e042da8238bb9faecb37a',
     })
   return  fetch(`${BASE_URL}/api/?${urlParams}`)

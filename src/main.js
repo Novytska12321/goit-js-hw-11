@@ -24,6 +24,7 @@ const lightbox = new SimpleLightbox('.gallery-card a', {
 
 const onSearchFormSubmit = event => {
     event.preventDefault();
+    galleryEl.innerHTML = ''
    
      
    
@@ -45,7 +46,7 @@ const onSearchFormSubmit = event => {
                     position: "topRight",
                     color: 'red',
                 })
-                
+               
             }
             const galleryMarkup = data.hits.map(createGalleryCard).join('');
             galleryEl.innerHTML = galleryMarkup;
@@ -58,7 +59,8 @@ const onSearchFormSubmit = event => {
             
             loaderEl.classList.add('is-hidden');
         });
-   searchFormEl.reset();
+    searchFormEl.reset();
+     galleryEl.innerHTML = ''
  
 };
      
